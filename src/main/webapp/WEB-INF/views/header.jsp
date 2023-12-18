@@ -13,7 +13,7 @@
 					</li> -->
 				<li class="suc">
 					<form action="/member/logout" method="post">
-						<button>로그아웃</button>
+						<button>로그아웃</button>sss
 					</form>
 				</li>
 				<li class="bef"><a href="/member/loginfrm">Login</a></li>
