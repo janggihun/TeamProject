@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+
+<mapper namespace="com.example.demo.baepo.dao.MemberDao">
+   <cache />
+<!--   board table을 Board 객체로 반환-->
+   <select id="memberInfo" >
+      select * from member
+   </select>
+   
+   <insert id = "memberInsert">
+   
+   	insert into member values(NULL,#{userId},#{userPw})
+   </insert>
+</mapper>
