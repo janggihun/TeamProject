@@ -6,20 +6,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="/js/common.js"></script>
 </head>
 
 <body>
-</br>
+	</br>
 	<h1>로그인 페이지</h1>
-	<h2><a th:href="@{/memberinsert}">회원가입 페이지로ssgesgse 이동</a></h2>
-</br>
-<form action="/" method="post">
-	<input type="text" placeholder="id를 입력해주세요" name="userId" id="userId"></br>
-	<input type="text" placeholder="pw를 입력해주세요" name="userPw" id="userPw"></br>
-</br>
-	<button>로그인버튼</button>
-</form>
-</br>
+	<h2><a th:href="@{/memberinsert}">회원가입 페이지로 이동하기</a></h2>
+	</br>
+	<form id="insert" action="/home/memberlogin" method="post">
+		<input type="text" placeholder="id를 입력해주세요" name="userId" id="userId"></br>
+		<input type="text" placeholder="pw를 입력해주세요" name="userPw" id="userPw"></br>
+		</br>
+		<input type="submit" value="로그인" id="insertButton">
+	</form>
+	</br>
 
 </body>
 
