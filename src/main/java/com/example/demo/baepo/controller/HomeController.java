@@ -3,9 +3,12 @@ package com.example.demo.baepo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.baepo.dao.MemberDao;
+import com.example.demo.baepo.dto.MemberDto;
 
+import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
@@ -31,7 +34,7 @@ public class HomeController {
 	}
 	///////////////////////////////////////////////////
 	@GetMapping("/memberinsert")
-	public String hello() {
+	public String memberInsert() {
 		
 		log.info("===========헬로우");
 		
@@ -43,6 +46,15 @@ public class HomeController {
 		log.info("==========memberinfo 통과");
 		memberDao.memberInfo();
 		return "/";
+	}
+	//////////////////////////////////////////
+	@PostMapping("/memberinsert")
+	public String memberInsert(MemberDto memberdto) {
+		
+		memberDao.memberInsert(memberdto);
+		
+		
+		return "redirect:/";
 	}
 	
 }
