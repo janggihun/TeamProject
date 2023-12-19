@@ -53,7 +53,7 @@ public class HomeController {
 		log.info("==============={}",memberdto);
 		memberDao.memberInsert(memberdto);
 		log.info("====회원가입통과");
-		
+
 		return "redirect:/";
 	}
 	
