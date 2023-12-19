@@ -10,12 +10,8 @@
       select * from member
    </select>
    
-   <insert id = "memberInsert"> 
+   <insert id = "memberInsert">
+   
    	insert into member values(NULL,#{userId},#{userPw})
    </insert>
-   
-    <select id="memberFind" >
-      select * from member where userId = #{userId}
-   </select>
-   
 </mapper>
