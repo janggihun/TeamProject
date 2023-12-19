@@ -48,7 +48,7 @@ public class HomeController {
 		return "/";
 	}
 	//////////////////////////////////////////
-	@PostMapping("/memberinsert")
+	@PostMapping("/home/memberInsert")
 	public String memberInsert(MemberDto memberdto) {
 		log.info("==============={}",memberdto);
 		memberDao.memberInsert(memberdto);
