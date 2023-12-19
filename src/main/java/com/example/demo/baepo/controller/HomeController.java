@@ -21,7 +21,7 @@ public class HomeController {
 	@GetMapping("/") //로그인 페이지시작
 	public String home() {
 		
-		log.info("===========통과");
+		log.info("===========로그인페이지");
 		
 		return "index";
 	}
@@ -36,7 +36,7 @@ public class HomeController {
 	@GetMapping("/memberinsert")
 	public String memberInsert() {
 		
-		log.info("===========헬로우");
+		log.info("===========회원가입페이지");
 		
 		return "memberInsert";
 	}
