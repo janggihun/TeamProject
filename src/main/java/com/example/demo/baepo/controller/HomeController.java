@@ -50,9 +50,9 @@ public class HomeController {
 	//////////////////////////////////////////
 	@PostMapping("/memberinsert")
 	public String memberInsert(MemberDto memberdto) {
-		
+		log.info("==============={}",memberdto);
 		memberDao.memberInsert(memberdto);
-		
+		log.info("====회원가입통과");
 		
 		return "redirect:/";
 	}
